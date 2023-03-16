@@ -1,0 +1,6 @@
+# this Manifestfile is an example for the GSC configuration
+
+sgx.enclave_size = "1024M"
+sgx.max_threads = 16
+
+sys.insecure__allow_eventfd = true
