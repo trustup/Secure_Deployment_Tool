@@ -132,9 +132,6 @@ node {
             def fileBase64 = input message: 'Enter the ManifestFile for image configuration', parameters: [base64File('ManifestFile')]
             withEnv(["fileBase64=$fileBase64"]) {
                 sh "echo $fileBase64 | base64 -d > ManifestFile.manifest"
-                //sh 'base64 --decode > ManifestFile.manifest'
-                
-                // powershell '[IO.File]::WriteAllBytes("myFile.txt", [Convert]::FromBase64String($env:fileBase64))'
             }
             
             sh "scp ManifestFile.manifest trustup@sgx.trustup.it:/home/trustup/gsc"
@@ -143,8 +140,6 @@ node {
             && openssl genrsa -3 -out key.pem 3072 \
             && ./gsc sign-image ${image} key.pem \
             && docker run --device=/dev/sgx_enclave --rm  ${Docker_run_options} -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket gsc-${image} '" 
-           // && docker rmi -f  ${image} gsc-${image}-unsigned gsc-${image}  ' "
-
         }
     }
 }
