@@ -2,7 +2,7 @@
 
 The purpose of the Secure Deployment tool is to offer a secure solution for containerized applications by using Hardware-Assisted Security to protect them at runtime. This protection is achieved by executing computations in a Trusted Execution Environment (TEE) based on hardware, thus preventing unauthorized access to data rather than transforming or dispersing it.
 
-![](/image/Architettura_SecureDeployment.png)
+![](/image/Architettura_SD.png)
 
 Exactly for the tool we expolit the TEE technology of Intel SGX. 
 
