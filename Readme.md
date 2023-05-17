@@ -1,4 +1,4 @@
-# Secure Deplyment Tool - Overview
+# TEE-based Secure Deployment Tool - Overview
 
 The purpose of the Secure Deployment tool is to offer a secure solution for containerized applications by using Hardware-Assisted Security to protect them at runtime. This protection is achieved by executing computations in a Trusted Execution Environment (TEE) based on hardware, thus preventing unauthorized access to data rather than transforming or dispersing it.
 
